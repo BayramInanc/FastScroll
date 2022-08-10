@@ -366,7 +366,9 @@ extension FastScrollCollectionView {
         
         //invalid timer
         if let handleTimer = handleTimer {
-            handleTimer.invalidate()
+            if handleTimer.isValid{
+                handleTimer.invalidate()
+            }
         }
         
         //scroll position
